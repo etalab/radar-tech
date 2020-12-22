@@ -8,3 +8,7 @@ Développer un questionnaire en ligne destinés aux agents/informaticien·nes tr
 * [23 nov 2020](documents/23-11-2020.md): premier backlog
 * [25 nov 2020](documents/25-11-2020.md): lancement du projet, deadlines
 * [22 dec 2020](documents/22-12-2020.md): point avec Bastien pré-fêtes de fin d'année
+
+# Architecture
+* [Mural](https://app.mural.co/t/coordo1125203/m/coordo1125203/1607011564072/33d79cfa39e077b17a0887f772d409d208e6f4b6): Architecture globale pour le MVP
+
