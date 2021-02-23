@@ -9,6 +9,7 @@ Développer un questionnaire en ligne destinés aux agents/informaticien·nes tr
 * [23 nov 2020](documents/23-11-2020.md): premier backlog
 * [25 nov 2020](documents/25-11-2020.md): lancement du projet, deadlines
 * [22 dec 2020](documents/22-12-2020.md): point avec Bastien pré-fêtes de fin d'année
+* [23 fev 2021](documents/23-02-2021-design.md): point avec Bastien re: design
 
 # Code source
 
