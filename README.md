@@ -207,7 +207,7 @@ Il faut créer le modèle dans la DB pour chaque fichier de la forme `<metier>.j
 
 Il faut placer les fichiers de la forme `<metier>.json` nouvellement créés dans le dossier `pages-métiers`.
 
-**Attention** : Il ne faut pas oublier de rajouter les images de présentation indiquées ici `"metier_icon": "<icon-metier>.jpeg",` dans le dossier `static` sous le même nom que dans le JSON `<icon-metier>.jpeg`.
+**Attention** : Il ne faut pas oublier de rajouter l'image de présentation indiquée ici `"metier_icon": "<icon-metier>.jpeg",` dans le dossier `static` sous le même nom que dans le JSON `<icon-metier>.jpeg`.
 
 ## Documentation déploiement
 
