@@ -201,7 +201,7 @@ Ensuite, il faut enregistrer le fichier en `<metier>.json`.
 
 #### Backend
 
-Il faut créer le modèle dans la DB pour chaque fichier de la forme `<metier>.json` nouvellement créé (cf. [Créer le modèle](Creer-le-modele)).
+Il faut créer le modèle dans la DB pour chaque fichier de la forme `<metier>.json` nouvellement créé (cf. [Créer le modèle](#créer-le-modèle)).
 
 #### Frontend
 
@@ -395,7 +395,7 @@ dokku apps:create <nom_application>
 
 #### Ajouter les variables d'environnement
 
-Le token pour accéder à l'API a été généré en amont. (cf. [Créer un token](#Creer-un-token))
+Le token pour accéder à l'API a été généré en amont. (cf. [Créer un token](#créer-un-token))
 
 Créer un fichier .env.production et ajouter les variables suivantes :
 
