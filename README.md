@@ -2,24 +2,25 @@
 
 ## Vision d'ensemble
 
-RadarTech est un outil de d'exploitation de questionnaires. Il permet
-la soumission de questionnaires aux milliers d'agents concernés via un
-site web dédié, puis de la production d'une page avec les résultats
-obtenus. La DINUM ne souhaite pas recourir à des outils de sondage
-classique car elle vise une accessibilité maximale et une expérience
-utilisateur propre à ce site, tant pour les questions que pour la
-présentation des résultats.
+RadarTech est un outil de déploiement et d'exploitation de
+questionnaires en ligne.
+
+Il permet la soumission de questionnaires via un site web dédié, puis
+la publication d'une page avec les résultats obtenus.  Cet outil à été
+conçu pour les besoins d'Etalab et de la DINUM, et utilise en partie
+les éléments du [système de design du
+gouvernement](https://www.systeme-de-design.gouv.fr/).
 
 ## Articulation
 
 Ce projet s'articule en plusieurs dépôts :
 
 * [RadarTech](https://github.com/etalab/radar-tech): présentant le
-  projet et sa documentation ;
+  projet et la documentation de déploiement.
 * [RadarTech Front](https://github.com/etalab/radar-tech-frontend):
-  contenant le Frontend de l'application ;
+  contenant le frontend de l'application ;
 * [RadarTech Backend](https://github.com/etalab/radar-tech-backend):
-  contenant le Backend de l'application ;
+  contenant le backend de l'application ;
 * [RadarTech Form](https://github.com/etalab/radar-tech-form):
   contenant les questionnaires.
 
