@@ -2,19 +2,34 @@
 
 ## Vision d'ensemble
 
-RadarTech est un outil de d'exploitation de questionnaires. Il permet la soumission de questionnaires aux milliers d'agents concernés via un site web dédié, puis de la production d'une page avec les résultats obtenus. La DINUM ne souhaite pas recourir à des outils de sondage classique car elle vise une accessibilité maximale et une expérience utilisateur propre à ce site, tant pour les questions que pour la présentation des résultats.
+RadarTech est un outil de d'exploitation de questionnaires. Il permet
+la soumission de questionnaires aux milliers d'agents concernés via un
+site web dédié, puis de la production d'une page avec les résultats
+obtenus. La DINUM ne souhaite pas recourir à des outils de sondage
+classique car elle vise une accessibilité maximale et une expérience
+utilisateur propre à ce site, tant pour les questions que pour la
+présentation des résultats.
 
 ## Articulation
 
-Ce projet s'articule en plusieurs dépôts : 
-* [RadarTech](https://github.com/etalab/radar-tech): présentant le projet et sa documentation
-* [RadarTech Front](https://github.com/etalab/radar-tech-frontend): contenant le Frontend de l'application
-* [RadarTech Backend](https://github.com/etalab/radar-tech-backend): contenant le Backend de l'application
-* [RadarTech Form](https://github.com/etalab/radar-tech-form): contenant les questionnaires
+Ce projet s'articule en plusieurs dépôts :
 
-Le **Frontend** étant la partie présentée directement à l'utilisateur, l'interface utilisateur.
+* [RadarTech](https://github.com/etalab/radar-tech): présentant le
+  projet et sa documentation ;
+* [RadarTech Front](https://github.com/etalab/radar-tech-frontend):
+  contenant le Frontend de l'application ;
+* [RadarTech Backend](https://github.com/etalab/radar-tech-backend):
+  contenant le Backend de l'application ;
+* [RadarTech Form](https://github.com/etalab/radar-tech-form):
+  contenant les questionnaires.
 
-Le **Backend** étant la partie immergée de l'application, véritable cheffe d'orchestre des interactions avec la base de données (création des questionnaires, stockage & récupération des informations reccueillies à partir des différents questionnaires, création d'un utilisateur, authentification d'un utilisateur, ...).
+Le **Frontend** est la partie présentée directement à l'utilisateur.
+
+Le **Backend** est la partie immergée de l'application, gérant les
+interactions avec la base de données : création des questionnaires,
+stockage et récupération des informations reccueillies à partir des
+différents questionnaires, création d'un utilisateur, authentification
+d'un utilisateur, etc.
 
 ## Suivi
 
@@ -24,12 +39,12 @@ Le **Backend** étant la partie immergée de l'application, véritable cheffe d'
 
 ### Archive des points, rendez-vous, conversations (ordre chronologique)
 
-* [23 nov. 2020](https://github.com/etalab/radar-tech/blob/main/documents/23-11-2020.md): Premier backlog
-* [25 nov. 2020](https://github.com/etalab/radar-tech/blob/main/documents/25-11-2020.md): Lancement du projet, deadlines
-* [22 dec. 2020](https://github.com/etalab/radar-tech/blob/main/documents/22-12-2020.md): Point avec Bastien pré-fêtes de fin d'année
-* [23 fev. 2021](https://github.com/etalab/radar-tech/blob/main/documents/23-02-2021-design.md): Point avec Bastien re: design
-* [2 mars 2021](https://github.com/etalab/radar-tech/blob/main/documents/02-03-2021-etalab.md): Feedback Etalab
 * [17 juin 2021](https://github.com/etalab/radar-tech/blob/main/documents/17-06-2021.md): Point
+* [2 mars 2021](https://github.com/etalab/radar-tech/blob/main/documents/02-03-2021-etalab.md): Feedback Etalab
+* [23 fev. 2021](https://github.com/etalab/radar-tech/blob/main/documents/23-02-2021-design.md): Point avec Bastien re: design
+* [22 dec. 2020](https://github.com/etalab/radar-tech/blob/main/documents/22-12-2020.md): Point avec Bastien pré-fêtes de fin d'année
+* [25 nov. 2020](https://github.com/etalab/radar-tech/blob/main/documents/25-11-2020.md): Lancement du projet, deadlines
+* [23 nov. 2020](https://github.com/etalab/radar-tech/blob/main/documents/23-11-2020.md): Premier backlog
 
 ## Documentation questionnaire
 ### Structure type
@@ -201,17 +216,23 @@ Ensuite, il faut enregistrer le fichier en `<metier>.json`.
 
 #### Backend
 
-Il faut créer le modèle dans la DB pour chaque fichier de la forme `<metier>.json` nouvellement créé (cf. [Créer le modèle](#créer-le-modèle)).
+Il faut créer le modèle dans la base de données pour chaque fichier de
+la forme `<metier>.json` nouvellement créé (cf. [Créer le
+modèle](#créer-le-modèle)).
 
 #### Frontend
 
-Il faut placer les fichiers de la forme `<metier>.json` nouvellement créés dans le dossier `pages-métiers`.
+Il faut placer les fichiers de la forme `<metier>.json` nouvellement
+créés dans le dossier `pages-métiers`.
 
-**Attention** : Il ne faut pas oublier de rajouter l'image de présentation indiquée ici `"metier_icon": "<icon-metier>.jpeg",` dans le dossier `static` sous le même nom que dans le JSON `<icon-metier>.jpeg`.
+**Attention** : ne pas oublier de rajouter l'image de présentation
+indiquée ici `"metier_icon": "<icon-metier>.jpeg",` dans le dossier
+`static` sous le même nom que dans le JSON `<icon-metier>.jpeg`.
 
-## Documentation déploiement
+## Documentation de déploiement avec dokku
 
-Pour déployer RadarTech, il faut commencer par déployer le Backend puis le Frontend.
+Pour déployer RadarTech, il faut commencer par déployer le backend
+puis le frontend.
 
 ### Créer le modèle
 
@@ -246,13 +267,15 @@ dokku mongo:create <mongo_service_name>
 dokku mongo:link <mongo_service_name> <nom_application>
 ```
 
-Le résultat retourné correspond à l'adresse de connexion à la DB, au format :
+Le résultat retourné correspond à l'adresse de connexion à la base de
+données, dans ce format :
 
 `mongodb://<service_name>:2652096c746158e0fd896ff2b7416877@<service_user>:27017/<nom_db>`
 
-La commande `mongo:link` va automatiquement ajouter l'URL vers Mongo en variable d'environnement.
+La commande `mongo:link` va automatiquement ajouter l'URL vers Mongo
+en variable d'environnement.
 
-A ce stade, il doit y avoir au moins ces 6 variables d'environnement.
+À ce stade, il doit y avoir au moins ces 6 variables d'environnement.
 
 Pour vérifier, il est possible de les lister :
 
@@ -279,7 +302,8 @@ npm run dev
 
 En amont, il faut créer un utilisateur manuellement (à améliorer).
 
-Il n'y a pas d'interface d'administration, donc la création de l'utilisateur est semi-automatisée.
+Il n'y a pas d'interface d'administration, donc la création de
+l'utilisateur est semi-automatisée.
 
 #### Créer le salt et hash d'un mot de passe
 
@@ -288,7 +312,7 @@ cd script
 node createHashAndSalt.js <nom_utilisateur> <mot_de_passe>
 ```
 
-Le salt et le mot de passe hashé sont affichés dans la console
+Le "salt" et le mot de passe hashé sont affichés dans la console.
 
 #### Créer un utilisateur dans la base de données
 
@@ -296,13 +320,14 @@ Le salt et le mot de passe hashé sont affichés dans la console
 dokku mongo:connect <nom_db>
 > db.users.insert({ username: 'frontend-app', role: 'frontend', password: '51407e040228a336a4db37684ce7ee9aee73c457a988b0493cb62930f0dfcf59', salt: '1c66ebc09fcf320a9189215c94bd93d8' })
 ```
+
 Le nom de la DB est indiqué à la fin de l'url de connexion :
 
 `mongodb://<service_name>:2652096c746158e0fd896ff2b7416877@<service_user>:27017/<nom_db>`
 
 #### Générer un token semi-manuellement
 
-Une route est dédiée à la génération du token
+Une route est dédiée à la génération du *token*.
 
 ##### Exemple avec CURL
 
@@ -336,7 +361,8 @@ request(options, function (error, response) {
 
 ### Lancer l'application
 
-Un nouveau schéma a été généré, la branche doit être créée avec ces modifications.
+Un nouveau schéma a été généré, la branche doit être créée avec ces
+modifications.
 
 ```
 git remote add dokku dokku@<ip_serveur>:<nom_application>
@@ -346,11 +372,12 @@ git commit -m "generate schema"
 git push dokku deploy:master
 ```
 
-**Remarque** : Sur ma machine, il est nécessaire de d'abord Husky installer en local grâce à la commande :
+**FIXME** : Sur ma machine, il est nécessaire d'installer d'abord
+ `husky` en local grâce à la commande :
 
 `npm install husky`
 
-Maintenant que le Backend est déployé, il faut déployer le Frontend.
+Maintenant que le backend est déployé, il faut déployer le frontend.
 
 ### Récupérer le projet
 
@@ -369,14 +396,15 @@ mv <metier>.json radar-tech-frontend/pages-metiers/<metier>.json
 
 ### Tester
 
-Ajouter les variables d'environnement dans un fichier `.env.development` à la racine du projet contenant :
+Ajouter les variables d'environnement dans un fichier
+`.env.development` à la racine du projet contenant :
 
 ```
 GATSBY_API_URL=<url_backend>
 GATSBY_API_TOKEN=<token_backend>
 ```
 
-Puis installer les dépendances et lancer l'application en locale
+Puis installer les dépendances et lancer l'application en local :
 
 ```
 sudo npm install -g gatsby-cli
@@ -395,9 +423,10 @@ dokku apps:create <nom_application>
 
 #### Ajouter les variables d'environnement
 
-Le token pour accéder à l'API a été généré en amont. (cf. [Créer un token](#créer-un-token))
+Le *token* pour accéder à l'API a été généré en amont. (cf. [Créer un
+token](#créer-un-token))
 
-Créer un fichier .env.production et ajouter les variables suivantes :
+Créer un fichier `.env.production` et ajouter les variables suivantes :
 
 ```
 dokku config:set GATSBY_API_URL=<url_backend>
@@ -406,7 +435,9 @@ dokku config:set GATSBY_API_TOKEN=<token_backend>
 
 ### Lancer l'application
 
-**Attention** : Comme on utilise 2 buildpacks, il faut utiliser le .buildpacks à la racine du projet, pour cela on s'assure qu'il n'y ait pas de buildpack set sur Dokku à l'aide de la commande :
+**Attention** : comme on utilise 2 buildpacks, il faut utiliser le
+`.buildpacks` à la racine du projet ; pour cela on s'assure qu'il n'y
+ait pas de buildpack défini sur Dokku à l'aide de la commande :
 
 `dokku buildpacks:clear <nom_application>`
 
@@ -417,12 +448,13 @@ dokku buildpacks:add --index 1 radar-tech-front https://github.com/heroku/heroku
 dokku buildpacks:add --index 2 radar-tech-front https://github.com/heroku/heroku-buildpack-static.git
 ```
 
-- Créer une nouvelle branche de déploiement
-- Ajouter les nouveaux questionnaires au format JSON
-- Forcer l'ajout du fichier de configuration
-- Pousser la nouvelle branche sur le dépôt distant Dokku
+- Créer une nouvelle branche de déploiement.
+- Ajouter les nouveaux questionnaires au format `json`.
+- Forcer l'ajout du fichier de configuration.
+- Pousser la nouvelle branche sur le dépôt distant Dokku.
 
-**Attention** : Il ne faut pas pousser cette branche sur le dépôt d'origine, elle contient le fichier d'environnement
+**Attention** : Il ne faut pas pousser cette branche sur le dépôt
+d'origine, elle contient le fichier d'environnement.
 
 ```
 git remote add dokku dokku@<ip_serveur>:<nom_application>
