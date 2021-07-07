@@ -1,8 +1,8 @@
-# Radar Tech Form
+# RadarTech Form
 
-Contenu du formulaire à publier via le projet Radar Tech.
+Les questionnaires sont accessibles dans ce dossier.
 
-# Questions
+## Questionnaires
 
 - [Tronc commun](commun.org)
 - [Datascientistes](datascience.org)
@@ -10,7 +10,7 @@ Contenu du formulaire à publier via le projet Radar Tech.
 - Développeurs
 - Encadrants (chefs de projet, coaches, etc.)
 
-# Ressources
+## Ressources
 
 - [The State of the Octoverse | The State of the Octoverse celebrates a year of building across teams, time zones, and millions of merged pull requests.](https://octoverse.github.com/)
 
@@ -18,6 +18,6 @@ Contenu du formulaire à publier via le projet Radar Tech.
 
 - [2020 Kaggle Machine Learning & Data Science Survey](https://www.kaggle.com/c/kaggle-survey-2020)
 
-# Licence
+## Licence
 
 Ce document est publié par Etalab et les contributeurs du dépôt sous [Licence Ouverte 2.0](LICENSE).
