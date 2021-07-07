@@ -40,6 +40,7 @@ d'un utilisateur, etc.
 
 ### Archive des points, rendez-vous, conversations (ordre chronologique)
 
+* [7 juillet 2021](https://github.com/etalab/radar-tech/blob/main/documents/07.07.2021.md): Rencontre avec Stanislas
 * [17 juin 2021](https://github.com/etalab/radar-tech/blob/main/documents/17-06-2021.md): Point
 * [2 mars 2021](https://github.com/etalab/radar-tech/blob/main/documents/02-03-2021-etalab.md): Feedback Etalab
 * [23 fev. 2021](https://github.com/etalab/radar-tech/blob/main/documents/23-02-2021-design.md): Point avec Bastien re: design
