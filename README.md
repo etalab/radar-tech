@@ -386,7 +386,6 @@ Maintenant que le backend est déployé, il faut déployer le frontend.
 ```
 git clone https://github.com/etalab/radar-tech-frontend.git
 cd radar-tech-frontend
-git checkout test/deployApp
 ```
 
 ### Ajouter le fichier décrivant les questionnaires
