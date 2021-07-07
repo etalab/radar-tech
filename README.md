@@ -20,9 +20,7 @@ Ce projet s'articule en plusieurs dépôts :
 * [RadarTech Front](https://github.com/etalab/radar-tech-frontend):
   contenant le frontend de l'application ;
 * [RadarTech Backend](https://github.com/etalab/radar-tech-backend):
-  contenant le backend de l'application ;
-* [RadarTech Form](https://github.com/etalab/radar-tech-form):
-  contenant les questionnaires.
+  contenant le backend de l'application.
 
 Le **Frontend** est la partie présentée directement à l'utilisateur.
 
@@ -31,6 +29,8 @@ interactions avec la base de données : création des questionnaires,
 stockage et récupération des informations reccueillies à partir des
 différents questionnaires, création d'un utilisateur, authentification
 d'un utilisateur, etc.
+
+Les **questionnaires** sont disponibles dans le dossier [formulaires](formulaires/).
 
 ## Suivi
 
