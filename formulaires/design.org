@@ -1,0 +1,149 @@
+# En savoir plus sur les profils du design
+
+** Fonction professionnelle
+
+*** A quelle expertise principale votre activité se rattache-t-elle ?
+
+: Prioriser trois dominantes :
+
+- Recherche utilisateur 
+- Design graphique
+- Design d'interfaces
+- Ergonomie, Accesibilité
+- Design interactif
+- Design UX
+- Design de service
+- Direction artistique
+- Design industriel
+- Design d'espace
+- Design stratégique
+- Animation, facilitation
+- Design management
+- Autre
+
+*** Quel est l'intitulé exact de votre fonction ?
+
+: Libre
+
+** Expérience et formation
+
+*** Combien d'année d'expérience professionnelle avez-vous ?
+
+: Choix simple
+
+- Étudiant
+- Moins d'un an (Jeune diplômé)
+- Entre 1 et 3 ans (Junior)
+- Entre 4 et 10 ans (Confirmé)
+- 10+ ans (Senior)
+
+*** Quel est votre niveau d’étude (dernier diplôme obtenu) ?
+
+: Choix simple
+
+- Étudiant
+- Brevet
+- Baccalauréat
+- Licence
+- Master
+- Doctorat
+
+*** Dans quel type d'établissement avez-vous effectué vos études ?
+
+: Choix simple
+
+- Université / IUT
+- École de design
+- École du numérique
+- École d'art
+- École d’ingénieur
+- École de commerce
+- Autre
+
+*** Quel est le nom du dernier établissement que vous avez fréquenté ?
+
+: Liste
+
+*** Avez-vous bénéficié d’autres types de formations ou d’expérience ?
+
+: Libre
+
+*** Avez-vous réalisé des recherches en design _/lors de votre cursus universitaire_ ?
+
+** Compétences, outils et méthodes de design
+
+: Questions à choix multiple
+: Permettre d'ajouter une compétence
+
+*** Quelles sont les compétences métiers que vous utilisez au quotidien (3) ?
+
+Cf. liste Design Link
+
+*** Quelles sont vos autres compétences métiers (3) ?
+
+Cf. liste Design Link
+
+*** Autres compétences utiles à vos missions (3) ?
+
+Cf. liste Design Link
+
+*** Quels outils utilisez-vous ?
+
+Cf. liste Design Link
+
+** Conditions de travail
+
+*** De quelle façon travaillez-vous ?
+
+: Choix simple
+
+- Un seul projet
+- Un seul projet et en appui ponctuel
+- Plusieurs projets
+- Encadrement et pilotage
+
+*** Format
+
+: Choix simple
+
+- Travaille seul.e
+- Au sein d'une équipe
+- Avec plusieurs équipes ou services
+
+*** Service de rattachement
+
+: Choix simple
+
+A quel service précis êtes-vous rattaché ?
+
+** Votre vision du métier de designer dans votre service
+
+*** Quelle est la perception globale des compétences de design dans votre service ? 
+
+: Choix simple
+
+- Fortement valorisées
+- Moyennement valorisées
+- Faiblement valorisées
+- Pas valorisées du tout
+
+*** Selon vous, les compétences de design dans votre service sont
+
+: Choix simple
+
+- Mal ou sous-exploitées
+- Bien exploitées
+- Pas d'avis
+
+*** Selon vous, quels autres besoins en design il y aurait-il dans votre service ?
+
+: Libre
+
+** Évolution et formation
+
+*** Êtes-vous satisfait·e de votre travail ?
+
+*** Êtes-vous à la recherche d’un nouvel emploi ?
+
+*** Auriez-vous besoin d'acquérir de nouvelles compétences ou de vous former ?
+

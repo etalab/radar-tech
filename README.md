@@ -247,17 +247,17 @@ node createSchema <chemin_metier_json>
 ### Créer l'application Dokku (Backend)
 
 ```
-dokku apps:create <nom_application>
+dokku apps:create <nom_application_backend>
 ```
 
 #### Ajouter les variables d'environnement
 
 ```
-dokku config:set <nom_application> API_URL=http://<nom_application>.app.etalab.studio
-dokku config:set <nom_application> ACCESS_TOKEN_TYPE='Bearer'
-dokku config:set <nom_application> ACCESS_TOKEN_ALGORITHM='HS256'
-dokku config:set <nom_application> ACCESS_TOKEN_SECRET='<token_secret>'
-dokku config:set <nom_application> SIB_API_KEY=<sendinblue_api_key>
+dokku config:set <nom_application_backend> API_URL=http://<nom_application>.app.etalab.studio
+dokku config:set <nom_application_backend> ACCESS_TOKEN_TYPE='Bearer'
+dokku config:set <nom_application_backend> ACCESS_TOKEN_ALGORITHM='HS256'
+dokku config:set <nom_application_backend> ACCESS_TOKEN_SECRET='<token_secret>'
+dokku config:set <nom_application_backend> SIB_API_KEY=<sendinblue_api_key>
 ```
 
 `<token_secret>` correspond à la clé secrète utilisée pour générer les token
@@ -266,13 +266,13 @@ dokku config:set <nom_application> SIB_API_KEY=<sendinblue_api_key>
 
 ```
 dokku mongo:create <mongo_service_name>
-dokku mongo:link <mongo_service_name> <nom_application>
+dokku mongo:link <mongo_service_name> <nom_application_backend>
 ```
 
 Le résultat retourné correspond à l'adresse de connexion à la base de
 données, dans ce format :
 
-`mongodb://<service_name>:2652096c746158e0fd896ff2b7416877@<service_user>:27017/<nom_db>`
+`mongodb://<mongo_service_name>:2652096c746158e0fd896ff2b7416877@<service_user>:27017/<nom_db>`
 
 La commande `mongo:link` va automatiquement ajouter l'URL vers Mongo
 en variable d'environnement.
@@ -282,12 +282,12 @@ en variable d'environnement.
 Pour vérifier, il est possible de les lister :
 
 ```
-dokku config:show <nom_application>
+dokku config:show <nom_application_backend>
 
 ACCESS_TOKEN_ALGORITHM:  HS256
 ACCESS_TOKEN_SECRET:     <token_secret>
 ACCESS_TOKEN_TYPE:       Bearer
-API_URL:                 http://<nom_application>.app.etalab.studio
+API_URL:                 http://<nom_application_backend>.app.etalab.studio
 MONGO_URL:               mongodb://<mongo_service_name>:<number_generated_by_dokku_service>@dokku-mongo-<mongo_service_name>:27017/<nom_db>
 SIB_API_KEY:             <sendinblue_api_key>
 ```
@@ -325,7 +325,7 @@ dokku mongo:connect <nom_db>
 
 Le nom de la DB est indiqué à la fin de l'url de connexion :
 
-`mongodb://<service_name>:2652096c746158e0fd896ff2b7416877@<service_user>:27017/<nom_db>`
+`mongodb://<mongo_service_name>:2652096c746158e0fd896ff2b7416877@<service_user>:27017/<nom_db>`
 
 #### Générer un token semi-manuellement
 
@@ -334,7 +334,7 @@ Une route est dédiée à la génération du *token*.
 ##### Exemple avec CURL
 
 ```
-curl --location --request POST 'http://<nom_application>.app.etalab.studio/token' \
+curl --location --request POST 'http://<nom_application_backend>.app.etalab.studio/token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "username": "<nom_utilisateur>",
@@ -348,7 +348,7 @@ curl --location --request POST 'http://<nom_application>.app.etalab.studio/token
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'http://<nom_application>.app.etalab.studio/token',
+  'url': 'http://<nom_application_backend>.app.etalab.studio/token',
   'headers': {
     'Content-Type': 'application/json'
   },
@@ -367,7 +367,7 @@ Un nouveau schéma a été généré, la branche doit être créée avec ces
 modifications.
 
 ```
-git remote add dokku dokku@<ip_serveur>:<nom_application>
+git remote add dokku dokku@<ip_serveur>:<nom_application_backend>
 git checkout -B deploy
 git add src/
 git commit -m "generate schema"
@@ -420,7 +420,7 @@ gatsby develop
 ### Créer l'application Dokku (Frontend)
 
 ```
-dokku apps:create <nom_application>
+dokku apps:create <nom_application_frontend>
 ```
 
 #### Ajouter les variables d'environnement
@@ -428,11 +428,9 @@ dokku apps:create <nom_application>
 Le *token* pour accéder à l'API a été généré en amont. (cf. [Créer un
 token](#créer-un-token))
 
-Créer un fichier `.env.production` et ajouter les variables suivantes :
-
 ```
-dokku config:set GATSBY_API_URL=<url_backend>
-dokku config:set GATSBY_API_TOKEN=<token_backend>
+dokku config:set <nom_application_frontend> GATSBY_API_URL=<url_backend>
+dokku config:set <nom_application_frontend> GATSBY_API_TOKEN=<token_backend>
 ```
 
 ### Lancer l'application
@@ -441,13 +439,13 @@ dokku config:set GATSBY_API_TOKEN=<token_backend>
 `.buildpacks` à la racine du projet ; pour cela on s'assure qu'il n'y
 ait pas de buildpack défini sur Dokku à l'aide de la commande :
 
-`dokku buildpacks:clear <nom_application>`
+`dokku buildpacks:clear <nom_application_frontend>`
 
 ou directement se passer du .buildpacks en faisant :
 
 ```
-dokku buildpacks:add --index 1 radar-tech-front https://github.com/heroku/heroku-buildpack-nodejs.git#v175
-dokku buildpacks:add --index 2 radar-tech-front https://github.com/heroku/heroku-buildpack-static.git
+dokku buildpacks:add --index 1 <nom_application_frontend> https://github.com/heroku/heroku-buildpack-nodejs.git#v175
+dokku buildpacks:add --index 2 <nom_application_frontend> https://github.com/heroku/heroku-buildpack-static.git
 ```
 
 - Créer une nouvelle branche de déploiement.
@@ -455,14 +453,12 @@ dokku buildpacks:add --index 2 radar-tech-front https://github.com/heroku/heroku
 - Forcer l'ajout du fichier de configuration.
 - Pousser la nouvelle branche sur le dépôt distant Dokku.
 
-**Attention** : Il ne faut pas pousser cette branche sur le dépôt
-d'origine, elle contient le fichier d'environnement.
-
 ```
-git remote add dokku dokku@<ip_serveur>:<nom_application>
+git remote add dokku dokku@<ip_serveur>:<nom_application_frontend>
 git checkout -b deploy
 git add pages-metiers/
 git add src/pages/resultats.tsx
 git commit -m "add metiers"
 git push dokku deploy:master
 ```
+
