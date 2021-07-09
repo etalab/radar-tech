@@ -1,0 +1,12 @@
+# Partie commune du questionnaire
+
+- Genre
+- Âge
+- Affiliation
+- Métier
+- Fonction (poste)
+- Statut (et accès à ce statut ?)
+- Années d'expérience (privé, public, recherche)
+- [Situtation géographie de l'organisme]
+- [Télétravail ?]
+

@@ -1,0 +1,67 @@
+# Questions pour les datascientistes
+
+* Formation universitaire
+
+- Ecoles et formations universitaires :
+  - ENSAE
+  - ...
+- Autre ?
+
+* Domaines/technologies dominantes (liste ordonnée)
+
+- TAL
+- Traitement du signal
+- Traitement des données temporelles
+- Computer vision
+- Stats et probas
+
+* Méthodes et algorithmes (choix multiple)
+
+- Méthodes Lineaires (regression logistique/lineaire)
+- Arbres de decision / Forets aleatoires 
+- Méthodes d'ensemble (xgboost, etc) 
+- Reseau de neurones
+- Reseau de neurones profonds (deep learning)
+- Méthodes bayesiennes
+- ... (other, none)
+
+* Machine learning framework usage (choix multiple)
+
+- SAS
+- SPSS
+- Scikit-learn
+- TensorFlow
+- Keras
+- Xgboost
+- PyTorch
+- LightGBM
+- Caret
+- Catboost
+- Prophet
+- Fast.ai
+- Tidymodels
+- Autre
+
+* Autres compétences utiles à vos missions (choix multiple)
+
+- Développement web
+- Datavisualisation
+- Machine learning ops
+- Data engineering (gestion de bdd, nettoyage, etc.)
+- Communication
+- Management
+
+* Autres outils
+
+Les utilisez-vous ?
+
+Pages 23-24-25 des résultats Kaggle
+
+* Usage des bases de données
+
+- MySQL
+- PostgreSQL
+- ...
+
+
+
