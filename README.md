@@ -466,3 +466,17 @@ git add src/pages/resultats.tsx
 git commit -m "add metiers"
 git push dokku deploy:master
 ```
+
+## Erreurs 
+### 403 
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>405 Method Not Allowed</title>
+<h1>Method Not Allowed</h1>
+<p>The method is not allowed for the requested URL.</p>
+```
+Cette erreur peut-être dû au fait que : 
+- le route requêtée n'est pas prise en charge. Dans notre cas les requêtes valides sont : 
+  - POST /token
+  - PORT /confirmEmail
+- l'application n'est pas démarrée. Assurez de bien avoir exécuter : `git push dokku <nom_de_la_branch_locale>:master` 
