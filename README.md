@@ -253,11 +253,11 @@ dokku apps:create <nom_application>
 #### Ajouter les variables d'environnement
 
 ```
-dokku config:set <nom_application> API_URL=http://<nom_application>.app.etalab.studio
-dokku config:set <nom_application> ACCESS_TOKEN_TYPE='Bearer'
-dokku config:set <nom_application> ACCESS_TOKEN_ALGORITHM='HS256'
-dokku config:set <nom_application> ACCESS_TOKEN_SECRET='<token_secret>'
-dokku config:set <nom_application> SIB_API_KEY=<sendinblue_api_key>
+dokku config:set API_URL=http://<nom_application>.app.etalab.studio
+dokku config:set ACCESS_TOKEN_TYPE='Bearer'
+dokku config:set ACCESS_TOKEN_ALGORITHM='HS256'
+dokku config:set ACCESS_TOKEN_SECRET='<token_secret>'
+dokku config:set SIB_API_KEY=<sendinblue_api_key>
 ```
 
 `<token_secret>` correspond à la clé secrète utilisée pour générer les token
