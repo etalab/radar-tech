@@ -292,13 +292,31 @@ MONGO_URL:               mongodb://<mongo_service_name>:<number_generated_by_dok
 SIB_API_KEY:             <sendinblue_api_key>
 ```
 
-### Tester
+### Tester en local
 
 ```
 cd ..
 npm install
 npm run dev
 ```
+
+### Lancer l'application
+
+Un nouveau schéma a été généré, la branche doit être créée avec ces
+modifications.
+
+```
+git remote add dokku dokku@<ip_serveur>:<nom_application>
+git checkout -B deploy
+git add src/
+git commit -m "generate schema"
+git push dokku deploy:master
+```
+
+**FIXME** : Sur ma machine, il est nécessaire d'installer d'abord
+ `husky` en local grâce à la commande :
+
+`npm install husky`
 
 ### Créer un token
 
@@ -360,24 +378,6 @@ request(options, function (error, response) {
   console.log(response.body);
 });
 ```
-
-### Lancer l'application
-
-Un nouveau schéma a été généré, la branche doit être créée avec ces
-modifications.
-
-```
-git remote add dokku dokku@<ip_serveur>:<nom_application>
-git checkout -B deploy
-git add src/
-git commit -m "generate schema"
-git push dokku deploy:master
-```
-
-**FIXME** : Sur ma machine, il est nécessaire d'installer d'abord
- `husky` en local grâce à la commande :
-
-`npm install husky`
 
 Maintenant que le backend est déployé, il faut déployer le frontend.
 
