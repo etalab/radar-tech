@@ -247,6 +247,9 @@ node createSchema <chemin_metier_json>
 ### Créer l'application Dokku (Backend)
 
 ```
+export DOKKU_HOST='studio-01.infra.data.gouv.fr'
+export DOKKU_PORT='22'
+export DOKKU_GIT_REMOTE='dokku'
 dokku apps:create <nom_application>
 ```
 
@@ -420,6 +423,9 @@ gatsby develop
 ### Créer l'application Dokku (Frontend)
 
 ```
+export DOKKU_HOST='studio-01.infra.data.gouv.fr'
+export DOKKU_PORT='22'
+export DOKKU_GIT_REMOTE='dokku'
 dokku apps:create <nom_application>
 ```
 
